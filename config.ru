@@ -1,8 +1,12 @@
 require 'rack'
 require 'rack/contrib/try_static'
+require 'rack/ssl-enforcer'
 
 # enable compression
 use Rack::Deflater
+
+# redirect to https
+use Rack::SslEnforcer
 
 # static configuration (file path matches request path)
 use Rack::TryStatic,

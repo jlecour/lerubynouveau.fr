@@ -3,6 +3,7 @@ ruby RUBY_VERSION
 
 # Minimal gem to serve static content on a PaaS
 gem 'rack-contrib'
+gem 'rack-ssl-enforcer'
 gem 'puma'
 
 # This will help ensure the proper Jekyll version is running.
