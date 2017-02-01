@@ -40,6 +40,7 @@ GEM
     rack-contrib (1.4.0)
       git-version-bump (~> 0.15)
       rack (~> 1.4)
+    rack-ssl-enforcer (0.2.9)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
@@ -56,6 +57,7 @@ DEPENDENCIES
   minima (~> 2.0)
   puma
   rack-contrib
+  rack-ssl-enforcer
 
 RUBY VERSION
    ruby 2.4.0p0
