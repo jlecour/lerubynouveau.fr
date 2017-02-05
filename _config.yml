@@ -5,20 +5,22 @@ description: >
   Le Ruby Nouveau est un podcast francophone sur la tech en général, le Web et Ruby en particulier.
 baseurl: ""
 url: "https://lerubynouveau.fr"
+logo_path: "/img/madame_rubis_500.png"
+audiofiles_path: "/mp3/"
 twitter_username: lerubynouveau
 github_username:  lerubynouveau
 
 collections:
- habitues:
-  output: true
-  permalink: /habitues/:path
-  values:
-    layout: habitue
- episodes:
-  output: true
-  permalink: :title:output_ext
-  values:
-    layout: episode
+  habitues:
+    output: true
+    permalink: /habitues/:path
+    values:
+      layout: habitue
+  episodes:
+    output: true
+    permalink: :title:output_ext
+    values:
+      layout: episode
 
 github: [metadata]
 lsi: false
