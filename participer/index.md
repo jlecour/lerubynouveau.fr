@@ -6,7 +6,7 @@ Nous discutons sur le canal #lerubynouveau sur le [Slack ParisRB](http://parisrb
 
 Vous pouvez nous rejoindre à la table, et contribuer sur GitHub !
 
-* nos [idées de sujets](https://github.com/LeRubyNouveau/lerubynouveau.fr/blob/master/id%C3%A9es.md)
+* nos [idées de sujets](https://github.com/LeRubyNouveau/lerubynouveau.fr/blob/master/documentation/id%C3%A9es.md)
 * les [conseils audio](https://github.com/LeRubyNouveau/lerubynouveau.fr/blob/master/documentation/audio.md) de Bob
 * [comment se passe un enregistrement ?](https://github.com/LeRubyNouveau/lerubynouveau.fr/blob/master/documentation/enregistrement.md)
 * [modèle d'épisode](https://github.com/LeRubyNouveau/lerubynouveau.fr/blob/master/_drafts/xxx-titre-invitee.md) pour Jekyll
