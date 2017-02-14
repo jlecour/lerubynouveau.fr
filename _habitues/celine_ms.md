@@ -3,7 +3,7 @@ layout: habitue
 name: Céline Martinet Sanchez
 website: http://www.c-m-s.co
 twitter: celine_m_s
-username: celine_m_s
+username: celine_ms
 zone: Paris, France
 github: celine-m-s
 pitch: Développeuse, formatrice et entrepreneure. Freelance :)
