@@ -1,13 +1,13 @@
 ---
 layout: habitue
 name: "Franzé Jr"
-website:
+website: http://about.me/franzejr
 twitter: franzejr
 username: franzejr
 zone: "Fortaleza, Brésil"
-github:
+github: franzejr
 pitch:
-photo:
+photo: https://avatars3.githubusercontent.com/u/868917
 desc:
 links:
   "RemoteMeetup": "http://remotemeetup.com"
