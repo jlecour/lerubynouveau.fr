@@ -13,6 +13,7 @@ layout: default
     });
   </script>
   <audio src="/mp3/{{ page.file }}"></audio>
+  <a href="/mp3/{{ page.file }}" download="{{ page.file }}">Télécharger l'épisode</a> ({{ page.size | divided_by: 1048576 }} Mo) - Date de publication : {{ page.published_date}}
 </div>
 
 <hr />
