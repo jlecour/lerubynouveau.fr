@@ -2,6 +2,11 @@
 <meta name="twitter:site" content="@lerubynouveau">
 <meta name="twitter:creator" content="@lerubynouveau">
 <meta name="twitter:domain" content="lerubynouveau.fr">
-<meta name="twitter:title" content="Les Rubyistes">
 <meta name="twitter:image" content="http://lerubynouveau.fr/img/madame_rubis_500.png">
+{% if page.published_date %}
+<meta name="twitter:title" content="{{ page.number }}. {{ page.title }}">
+<meta name="twitter:description" content="{{ page.tagline }}">
+{% else %}
+<meta name="twitter:title" content="Les Rubyistes">
 <meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
