@@ -6,6 +6,7 @@
 {% if page.published_date %}
 <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
 <meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.summary }} Avec {% capture header %}{% include hosts.html hosts=page.hosts %}{% endcapture %}{{ header | strip_newlines }}" />
 {% else %}
 <meta property="og:url" content="{{ site.url }}" />
 <meta property="og:title" content="Le Ruby Nouveau" />
