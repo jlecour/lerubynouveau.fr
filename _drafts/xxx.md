@@ -2,18 +2,17 @@
 layout: episode
 number: "XXX"
 title: titre de l'épisode
-tagline: accroche
-summary: résumé des points abordés
+tagline: "accroche"
+summary: "résumé des points abordés"
 published_date: 2017-01-31
-img: madame_rubis_500.png
 tags: [LeRubyNouveau, Tag1, Tag2]
 file: le_ruby_nouveau_xxx_titre.mp3
 format: mp3
 size: "FILE_BYTES"
 duration: "min:sec"
 hosts:
-  nick:
-  handle:
+  - username1
+  - username2
 actus:
   nouvelle:
     title: Actu 1
