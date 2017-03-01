@@ -7,6 +7,6 @@ playlist: true
 {% for episode in site.episodes reversed %}<a href="/{{episode.number}}.html">
   <h2 class="nm">{{ episode.number }}. {{ episode.title }}</h2></a>
   {{ episode.tagline }}
-  <p class="info nm">avec {% for host in episode.hosts %}{{ host[1] }}{% if forloop.last == false %}, {% endif %}{% endfor %}</p>
+  <p class="info nm">avec {% include hosts.html hosts=episode.hosts links=true %}.</p>
   <br />
 {% endfor %}

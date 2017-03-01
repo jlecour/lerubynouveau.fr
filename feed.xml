@@ -31,9 +31,20 @@ layout: null
         <guid isPermaLink="true">{{ ep.url | prepend: site.baseurl | prepend: site.url }}</guid>
         <pubDate>{{ ep.published_date | date_to_rfc822 }}</pubDate>
         <itunes:subtitle>{{ ep.tagline }}</itunes:subtitle>
-        <itunes:summary>{{ ep.summary }}</itunes:summary>
+        <itunes:author>{% include hosts.html hosts=ep.hosts %}</itunes:author>
+        <itunes:summary><![CDATA[
+          <p>{{ ep.summary }}</p>
+        </p>Transcript de l'épisode sur notre site&nbsp;: <a href="{{ ep.url | prepend: site.baseurl | prepend: site.url }}">{{ ep.url | prepend: site.baseurl | prepend: site.url }}</a></p>
+          <p>Gourmandises des invités&nbsp;:</p>
+          <ul>
+          {% for p in ep.picks %}
+            {% assign pick = p[1] %}
+            {% assign hab = site.habitues | where:"username", pick.panelist | first %}
+            <li><a href="{{ site.url }}{{ site.baseurl }}/habitues/{{ hab.username }}.html">{{ hab.name }}</a>&nbsp;: <a href="{{ pick.link }}">{{ pick.title }}</a>&nbsp;– {{ pick.comment }}</li>
+          {% endfor %}
+          </ul>
+        ]]></itunes:summary>
         <itunes:duration>{{ ep.duration }}</itunes:duration>
-        <itunes:author>{{ site.author | xml_escape }}</itunes:author>
         <itunes:keywords>{% for tag in ep.tags %}{{ tag | xml_escape }}{% if forloop.last == false %}, {% endif %}{% endfor %}</itunes:keywords>
         <enclosure url="{{ ep.file | prepend: site.audiofiles_path | prepend: site.url }}" length="{{ ep.size }}" type="audio/{{ ep.format }}" />
       </item>
