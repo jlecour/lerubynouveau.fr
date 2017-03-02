@@ -27,7 +27,7 @@ layout: null
       <item>
         <title>{{ ep.number }}. {{ ep.title | xml_escape }}</title>
         <description>{{ ep.title | xml_escape }} - {{ ep.tagline | xml_escape }}</description>
-        <link>{{ ep.file | prepend: site.audiofiles_path | prepend: site.media_url }}</link>
+        <link>{{ ep.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ ep.url | prepend: site.baseurl | prepend: site.url }}</guid>
         <pubDate>{{ ep.published_date | date_to_rfc822 }}</pubDate>
         <itunes:subtitle>{{ ep.tagline }}</itunes:subtitle>
