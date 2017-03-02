@@ -27,7 +27,7 @@ layout: null
       <item>
         <title>{{ ep.number }}. {{ ep.title | xml_escape }}</title>
         <description>{{ ep.title | xml_escape }} - {{ ep.tagline | xml_escape }}</description>
-        <link>{{ ep.file | prepend: site.audiofiles_path | prepend: site.url }}</link>
+        <link>{{ ep.file | prepend: site.audiofiles_path | prepend: site.media_url }}</link>
         <guid isPermaLink="true">{{ ep.url | prepend: site.baseurl | prepend: site.url }}</guid>
         <pubDate>{{ ep.published_date | date_to_rfc822 }}</pubDate>
         <itunes:subtitle>{{ ep.tagline }}</itunes:subtitle>
@@ -46,7 +46,7 @@ layout: null
         ]]></itunes:summary>
         <itunes:duration>{{ ep.duration }}</itunes:duration>
         <itunes:keywords>{% for tag in ep.tags %}{{ tag | xml_escape }}{% if forloop.last == false %}, {% endif %}{% endfor %}</itunes:keywords>
-        <enclosure url="{{ ep.file | prepend: site.audiofiles_path | prepend: site.url }}" length="{{ ep.size }}" type="audio/{{ ep.format }}" />
+        <enclosure url="{{ ep.file | prepend: site.audiofiles_path | prepend: site.media_url }}" length="{{ ep.size }}" type="audio/{{ ep.format }}" />
       </item>
     {% endfor %}
   </channel>
