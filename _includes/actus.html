@@ -1,0 +1,6 @@
+<dl>
+{% for actu in include.actus %}
+  <dt><a href="{{ actu.link }}">{{ actu.title }}</a></dt>
+  <dd>{{ actu.comment }}</dd>
+{% endfor %}
+</dl>

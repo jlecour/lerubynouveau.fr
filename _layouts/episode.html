@@ -21,24 +21,16 @@ layout: default
 
 <div id="transcript">
 
-<h2>Actus</h2>
-
-<ul>{% for my_actu in page.actus %}{% assign actu = my_actu[1] %}<li>
-  <a href="{{ actu.link }}"><h3>{{ actu.title }}</h3></a>
-  {{ actu.comment }}
-</li>{% endfor %}</ul>
+{% include actus.html actus=page.actus %}
 
 <hr />
+
+<h2>Le sujet : {{ page.tagline}}</h2>
 
 {{ content }}
 
 <hr />
 
-<h2>Friandises</h2>
-
-<ul>{% for my_pick in page.picks %}{% assign pick = my_pick[1] %}<li>
-  <a href="{{ pick.link }}"><h3>{{ pick.title }}</h3></a>
-  {{ pick.comment }} — {{ pick.panelist }}
-</li>{% endfor %}</ul>
+{% include discoveries.html discoveries=page.discoveries %}
 
 </div>

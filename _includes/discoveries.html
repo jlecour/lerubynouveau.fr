@@ -1,0 +1,10 @@
+<h2>Découvertes des invités</h2>
+<dl>
+{% for d in include.discoveries %}
+  {% assign hab = site.habitues | where:"username", d[0] | first %}
+  <dt><a href="{{ site.url }}{{ site.baseurl }}/habitues/{{ hab.username }}.html">{{ hab.name }}</a></dt>
+  {% for pick in d[1].picks %}
+    <dd>{{ pick.comment }}&nbsp;– <a href="{{ pick.link }}">{{ pick.title }}</a></dd>
+  {% endfor %}
+{% endfor %}
+</dl>

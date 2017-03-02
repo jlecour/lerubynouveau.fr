@@ -33,16 +33,12 @@ layout: null
         <itunes:subtitle>{{ ep.tagline }}</itunes:subtitle>
         <itunes:author>{% include hosts.html hosts=ep.hosts %}</itunes:author>
         <itunes:summary><![CDATA[
+          <h2>Actualité</h2>
+          {% include actus.html actus=ep.actus %}
+          <h2>{{ ep.title }}</h2>
           <p>{{ ep.summary }}</p>
-        </p>Transcript de l'épisode sur notre site&nbsp;: <a href="{{ ep.url | prepend: site.baseurl | prepend: site.url }}">{{ ep.url | prepend: site.baseurl | prepend: site.url }}</a></p>
-          <p>Gourmandises des invités&nbsp;:</p>
-          <ul>
-          {% for p in ep.picks %}
-            {% assign pick = p[1] %}
-            {% assign hab = site.habitues | where:"username", pick.panelist | first %}
-            <li><a href="{{ site.url }}{{ site.baseurl }}/habitues/{{ hab.username }}.html">{{ hab.name }}</a>&nbsp;: <a href="{{ pick.link }}">{{ pick.title }}</a>&nbsp;– {{ pick.comment }}</li>
-          {% endfor %}
-          </ul>
+          </p>Transcript de l'épisode sur notre site&nbsp;: <a href="{{ ep.url | prepend: site.baseurl | prepend: site.url }}">{{ ep.url | prepend: site.baseurl | prepend: site.url }}</a></p>
+          {% include discoveries.html actus=ep.discoveries %}
         ]]></itunes:summary>
         <itunes:duration>{{ ep.duration }}</itunes:duration>
         <itunes:keywords>{% for tag in ep.tags %}{{ tag | xml_escape }}{% if forloop.last == false %}, {% endif %}{% endfor %}</itunes:keywords>

@@ -7,6 +7,7 @@ baseurl: ""
 url: "https://lerubynouveau.fr"
 media_url: "http://lerubynouveau.media.s3-website-eu-west-1.amazonaws.com"
 logo_hd: "logo_le_ruby_nouveau_hd.jpg"
+logo_sd: "madame_rubis_500.png"
 audiofiles_path: "/mp3/"
 imagefiles_path: "/img/"
 twitter_username: lerubynouveau
