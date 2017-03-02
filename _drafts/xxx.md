@@ -3,7 +3,8 @@ layout: episode
 number: "XXX"
 title: titre de l'épisode
 tagline: accroche
-summary: résumé des points abordés
+summary: >
+  résumé des points abordés
 published_date: 2017-01-31
 tags: [LeRubyNouveau, Tag1, Tag2]
 file: le_ruby_nouveau_xxx_titre.mp3
