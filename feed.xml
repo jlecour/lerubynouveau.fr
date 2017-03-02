@@ -38,7 +38,7 @@ layout: null
           <h2>{{ ep.title }}</h2>
           <p>{{ ep.summary }}</p>
           </p>Transcript de l'épisode sur notre site&nbsp;: <a href="{{ ep.url | prepend: site.baseurl | prepend: site.url }}">{{ ep.url | prepend: site.baseurl | prepend: site.url }}</a></p>
-          {% include discoveries.html actus=ep.discoveries %}
+          {% include discoveries.html discoveries=ep.discoveries %}
         ]]></itunes:summary>
         <itunes:duration>{{ ep.duration }}</itunes:duration>
         <itunes:keywords>{% for tag in ep.tags %}{{ tag | xml_escape }}{% if forloop.last == false %}, {% endif %}{% endfor %}</itunes:keywords>
