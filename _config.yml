@@ -49,4 +49,3 @@ exclude:
   - Procfile
   - README.md
   - config.ru
-  - documentation

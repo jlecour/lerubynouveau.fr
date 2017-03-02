@@ -1,10 +1,15 @@
+---
+layout: default
+title: Documentation
+---
+{% include documentation.html %}
 # Enregistrement
 
 _Vous allez participer à l'enregistrement d'un épisode de Le Ruby Nouveau : bienvenue !
-Tout va bien se passer dans le respect, la bienveillance et la détente. 
+Tout va bien se passer dans le respect, la bienveillance et la détente.
 Pour que chacun-e sache où on va, voici comment ça devrait se passer._
 
-N'hésitez pas à lire les autres fichiers du dépôt sur : la qualité audio, nos idées, les sujets d'épisode... 
+N'hésitez pas à lire les autres fichiers du dépôt sur : la qualité audio, nos idées, les sujets d'épisode...
 Allez, prenez un verre d'eau, passez aux toilettes, asseyez-vous conformtablement, coupez les notifications, mettez votre casque audio et... on y va !
 
 ## PRE CALL (~30mn)
@@ -40,7 +45,7 @@ _Si on a des annonces sur le podcast, les meetups, les confs, les actus et gems 
 ### 10~40mn d'épisode
 _On déroule les sujets de la liste établie en pre-call, on échange, on clarifie, on discute._
 
-Si on parle de quelque chose qui n'est pas évident/connu, on essaie placer une explication rapide. 
+Si on parle de quelque chose qui n'est pas évident/connu, on essaie placer une explication rapide.
 Si on pense partir dans une discussion trop longue et hors sujet, proposer un autre épisode ?
 
 ### Clôture du podcast

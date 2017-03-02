@@ -1,5 +1,9 @@
-# EPISODES
-Voici nos idées de sujets. N'hésitez pas à en suggérer !
+---
+layout: default
+title: Documentation
+---
+{% include documentation.html %}
+# Voici nos idées de sujets. N'hésitez pas à en suggérer !
 
 ## Sujets de fond
 * Santé, introversion, santé mentale, burnout
@@ -23,7 +27,7 @@ Voici nos idées de sujets. N'hésitez pas à en suggérer !
 * Import export
 * Scopes
 * Horreurs de code
-* Tests : que tester, comment tester 
+* Tests : que tester, comment tester
 * Stack Rails (asset pipeline, turbolinks, I18N)
 
 ## Outils
@@ -69,4 +73,3 @@ Voici nos idées de sujets. N'hésitez pas à en suggérer !
   - Maghreb, Afrique
   - Canada (Québec, Montréal)
   - Expats en pays non francophones : Londres, Berlin, Vienne, Nouvelle-Zélande...
-

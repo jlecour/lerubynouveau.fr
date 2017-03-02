@@ -1,3 +1,8 @@
+---
+layout: default
+title: Documentation
+---
+{% include documentation.html %}
 # Le Ruby Nouveau – épisode NNN
 
 ## Participants
