@@ -2,7 +2,7 @@
   <h3>Épisodes</h3>
   <audio preload></audio>
   <ol class="playlist">{% for ep in site.episodes reversed %}
-    <li><a href="#" data-src="{{ ep.file | prepend: site.audiofiles_path }}">{{ ep.number }}. {{ ep.title }}</a></li>
+    <li><a href="#" data-src="{{ ep.file | prepend: site.audiofiles_path | prepend: site.media_url }}">{{ ep.number }}. {{ ep.title }}</a></li>
   {% endfor %}</ol>
 </div>
 <div id="shortcuts">

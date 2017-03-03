@@ -1,0 +1,4 @@
+<dl>{% for actu in include.actus %}
+  <dt>•&nbsp;<a href="{{ actu.link }}">{{ actu.title }}</a></dt>{% if include.from_feed == true %}<br />{% endif %}
+  {% if include.from_feed == true %}&nbsp;&nbsp;&nbsp;&nbsp;{% endif %}<dd>{{ actu.comment }}</dd>{% if include.from_feed == true %}<br />{% endif %}
+{% endfor %}</dl>

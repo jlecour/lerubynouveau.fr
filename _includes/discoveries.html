@@ -1,0 +1,9 @@
+<h2>{% if include.from_feed == true %}# {% endif %}Découvertes des invités</h2>{% if include.from_feed == true %}<br />{% endif %}
+<dl>{% for d in include.discoveries %}
+  {% if include.from_feed == true %}<br />{% endif %}
+  {% assign hab = site.habitues | where:"username", d[0] | first %}
+  <dt>•&nbsp;<a href="{{ site.url }}{{ site.baseurl }}/habitues/{{ hab.username }}.html">{{ hab.name }}</a></dt>{% if include.from_feed == true %}<br />{% endif %}
+  {% for pick in d[1].picks %}
+    {% if include.from_feed == true %}&nbsp;&nbsp;&nbsp;&nbsp;{% endif %}<dd>{{ pick.comment }}{% if pick.comment %}&nbsp;– {% endif %}<a href="{{ pick.link }}">{{ pick.title }}</a></dd>{% if include.from_feed == true %}<br />{% endif %}
+  {% endfor %}
+{% endfor %}</dl>

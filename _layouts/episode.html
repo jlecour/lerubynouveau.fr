@@ -4,7 +4,8 @@ layout: default
 <div class="episode">
   <h1>{{ page.number }}. {{ page.title }}</h1>
   <em>{{ page.tagline }}</em><br />
-  <p>À la table, {% for host in page.hosts %}<a href="/habitues/{{ host[0] }}.html">{{ host[1] }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}.</p>
+  <p>À la table, {% include hosts.html hosts=page.hosts links=true %}.
+  </p>
 
   <script src="/audiojs/audio.min.js"></script>
   <script>
@@ -12,32 +13,24 @@ layout: default
       var as = audiojs.createAll();
     });
   </script>
-  <audio src="/mp3/{{ page.file }}"></audio>
-  <a href="/mp3/{{ page.file }}" download="{{ page.file }}">Télécharger l'épisode</a> ({{ page.size | divided_by: 1048576 }} Mo) - Date de publication : {{ page.published_date}}
+  <audio src="{{ page.file | prepend: site.audiofiles_path | prepend: site.media_url }}"></audio>
+  <a href="{{ page.file | prepend: site.audiofiles_path | prepend: site.media_url }}" download="{{ page.file }}">Télécharger l'épisode</a> ({{ page.size | divided_by: 1048576 }} Mo) - Date de publication : {{ page.published_date}}
 </div>
 
 <hr />
 
 <div id="transcript">
 
-<h2>Actus</h2>
-
-<ul>{% for my_actu in page.actus %}{% assign actu = my_actu[1] %}<li>
-  <a href="{{ actu.link }}"><h3>{{ actu.title }}</h3></a>
-  {{ actu.comment }}
-</li>{% endfor %}</ul>
+{% include actus.html actus=page.actus %}
 
 <hr />
+
+<h2>Le sujet : {{ page.tagline}}</h2>
 
 {{ content }}
 
 <hr />
 
-<h2>Friandises</h2>
-
-<ul>{% for my_pick in page.picks %}{% assign pick = my_pick[1] %}<li>
-  <a href="{{ pick.link }}"><h3>{{ pick.title }}</h3></a>
-  {{ pick.comment }} — {{ pick.panelist }}
-</li>{% endfor %}</ul>
+{% include discoveries.html discoveries=page.discoveries %}
 
 </div>

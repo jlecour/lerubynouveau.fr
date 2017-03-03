@@ -1,3 +1,8 @@
+---
+layout: default
+title: Documentation
+---
+{% include documentation.html %}
 # L'audio dans un podcast audio... c'est important !
 
 La qualité d'un podcast audio c'est 50% du contenu et 50% de la qualité audio. C'est également un peu ce qui fait la différence entre un podcast que l'on suit et un autre que l'on oublie.
