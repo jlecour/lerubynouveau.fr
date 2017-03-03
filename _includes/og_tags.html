@@ -5,7 +5,7 @@
 {% if page.published_date %}
 <meta property="og:image" content="{{ page.img | prepend: site.imagefiles_path | prepend: site.media_url }}" />
 <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
-<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:title" content="{{ page.number }}. {{ page.title }}" />
 <meta property="og:description" content="{{ page.summary }} Avec {% capture header %}{% include hosts.html hosts=page.hosts %}{% endcapture %}{{ header | strip_newlines }}" />
 {% else %}
 <meta property="og:image" content="{{ site.logo_sd | prepend: site.imagefiles_path | prepend: site.media_url }}" />
