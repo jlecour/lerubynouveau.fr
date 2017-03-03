@@ -2,7 +2,7 @@
 <meta name="twitter:site" content="@lerubynouveau">
 <meta name="twitter:creator" content="@lerubynouveau">
 <meta name="twitter:domain" content="lerubynouveau.fr">
-<meta name="twitter:image" content="{{ page.img | prepend: site.imagefiles_path | prepend: site.media_url }}">
+<meta name="twitter:image" content="{{ site.logo_sd | prepend: site.imagefiles_path | prepend: site.media_url }}">
 {% if page.published_date %}
 <meta name="twitter:title" content="{{ page.number }}. {{ page.title }}">
 <meta name="twitter:description" content="{{ page.tagline }} Avec {% capture header %}{% include hosts_twitter.html hosts=page.hosts %}{% endcapture %}{{ header | strip_newlines }}">
