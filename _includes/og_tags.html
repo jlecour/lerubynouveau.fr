@@ -2,13 +2,12 @@
 <meta property="og:locale" content="fr-FR" />
 <meta property="og:rich_attachment" content="true" />
 <meta property="og:updated_time" content="{{ site.episodes.last.published_date | date_to_rfc822 }}" />
+<meta property="og:image" content="{{ site.logo_hd | prepend: site.imagefiles_path | prepend: site.media_url }}" />
 {% if page.published_date %}
-<meta property="og:image" content="{{ page.img | prepend: site.imagefiles_path | prepend: site.media_url }}" />
 <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
 <meta property="og:title" content="{{ page.number }}. {{ page.title }}" />
 <meta property="og:description" content="{{ page.summary }} Avec {% capture header %}{% include hosts.html hosts=page.hosts %}{% endcapture %}{{ header | strip_newlines }}" />
 {% else %}
-<meta property="og:image" content="{{ site.logo_sd | prepend: site.imagefiles_path | prepend: site.media_url }}" />
 <meta property="og:url" content="{{ site.url }}" />
 <meta property="og:title" content="Le Ruby Nouveau" />
 <meta property="og:description" content="{{ site.description }}" />
