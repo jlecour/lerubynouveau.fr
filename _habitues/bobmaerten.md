@@ -7,7 +7,7 @@ username: bobmaerten
 zone: Valenciennes, France
 github: bobmaerten
 pitch: En rémission de la fonction publique
-photo: https://bobmaerten.eu/images/avatar2014-23be5c26.jpg
+photo: https://bobmaerten.eu/images/bob_podcasting-41e431c6.jpg
 desc: Ancien sysadmin, tombé dans le dev depuis. Esprit DevOps en sommes.
 links:
   "Level Up Solutions": "https://levups.com"
