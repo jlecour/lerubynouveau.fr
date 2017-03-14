@@ -7,6 +7,8 @@ body {
   background: #F8E3D1;
   text-align: center;
   color: #9B5725;
+  max-width: 42em;
+  margin: 2em 0;
 }
 
 h1, h2, h3 { font-family: 'Amarante', cursive; }
