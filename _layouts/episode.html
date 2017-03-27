@@ -27,6 +27,9 @@ layout: default
 
 <h2>Le sujet : {{ page.tagline}}</h2>
 
+{% if page.transcript_by %}
+<p><b>Transcript par :</b> {% include hosts.html hosts=page.transcript_by links=true %}</p>
+{% endif %}
 {{ content }}
 
 <hr />
