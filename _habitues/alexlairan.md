@@ -1,6 +1,6 @@
 ---
 layout: habitue
-name: Alexandre Lairon
+name: Alexandre Lairan
 website:
 twitter:
 username: alexlairan
