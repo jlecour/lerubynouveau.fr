@@ -1,13 +1,12 @@
 ---
 layout: habitue
-name: Sonia Prévost
+name: Caroline
 website:
-username: wondersonja
-twitter: wondersonja
+username: caroline
+twitter:
 zone: Paris, France
 github:
 pitch:
 photo:
-desc:
 links:
 ---
