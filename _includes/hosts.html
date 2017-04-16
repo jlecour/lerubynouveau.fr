@@ -1,6 +1,6 @@
 {% for host in include.hosts %}
 {% assign hab = site.habitues | where:"username", host | first %}
-{% if forloop.last == true %} et 
+{% if forloop.last == true and forloop.length > 1 %} et 
 {% else %}
 {% if forloop.first == false %}, {% endif %}
 {% endif %}
