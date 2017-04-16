@@ -1,18 +1,11 @@
-<div id="wrapper">
-  <h3>Épisodes</h3>
-  <audio preload></audio>
-  <ol class="playlist">{% for ep in site.episodes reversed %}
-    <li><a href="#" data-src="{{ ep.file | prepend: site.audiofiles_path | prepend: site.media_url }}">{{ ep.number }}. {{ ep.title }}</a></li>
-  {% endfor %}</ol>
-</div>
-<div id="shortcuts">
-  <p class="info">
-    <em>Raccourcis : </em>
-&nbsp;
-    <code>&rarr;</code> Suivant
-&nbsp;&nbsp;&nbsp;
-    <code>&larr;</code> Précédent
-&nbsp;&nbsp;&nbsp;
-    <em>Esp.</em> Lire / pause
-  </div>
-</div>
+{% assign last_episode = site.episodes | last %}
+<audio id="audio" controls preload="none">
+	<source type="audio/mp3" src="{{ last_episode.file | prepend: site.audiofiles_path | prepend: site.media_url }}" type="audio/mpeg">
+	Your browser does not support the audio element.
+</audio>
+<ul id="playlist">{% for ep in site.episodes reversed %}
+  <li class="{% if forloop.first == true%}active{% endif %}"><a href="{{ ep.file | prepend: site.audiofiles_path | prepend: site.media_url }}">{{ ep.number }}. {{ ep.title }}</a></li>
+{% endfor %}</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="js/audio.js"></script>

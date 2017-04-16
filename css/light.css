@@ -20,20 +20,18 @@ a:hover { text-decoration: underline;; }
 .content { width: 90%; min-width: 320px; margin: auto; }
 .menu a { text-decoration: underline; }
 #transcript, ul { text-align: left; }
-
-.audiojs, #wrapper { margin: auto; width: 290px; }
-.audiojs .scrubber { width: 120px; }
-
-.playlist { margin: 0 0 0 2em; padding: 0; }
-.playlist li { text-align: left; padding: 0.5em; }
+#wrapper { margin: auto; width: 290px; }
+#audio { margin: 1em 0; padding: 0; }
+#playlist { margin: 0 0 1em 0; padding: 0; }
+#playlist li.active a { background-color: #9B5725; color: #F8E3D1 }
 
 .glass { font-family: 'Glass Antiqua', cursive; font-weight: normal; }
 .footer, .info { font-size: 90%; font-style: italic; }
 .footer { text-align: right; border-top: 1px solid #9B5725; margin-top: 2em; }
 hr { width: 75%; border: 1px inset #9B5725; }
 
-h1 a, .playlist a { text-decoration: none; }
-.nm { margin: 0; }
+.nm { margin: 0.5em 0; }
+h1 a, #playlist a { text-decoration: none; }
 
 a:visited { color: #660000; }
 a:hover { color: #C88D41; }
