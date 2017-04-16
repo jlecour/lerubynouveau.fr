@@ -1,3 +1,4 @@
+// Inspired by comments on http://devblog.lastrose.com/html5-audio-video-playlist/
 var audio;
 var playlist;
 var tracks;
