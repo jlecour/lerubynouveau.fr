@@ -1,1 +1,8 @@
-{% for host in include.hosts %}{% assign hab = site.habitues | where:"username", host | first %}{% if forloop.last == true %}et {% endif %}{% if include.links %}<a href="/habitues/{{ hab.username }}.html">{% endif %}{{ hab.name }}{% if include.links %}</a>{% endif %}{% if forloop.last == false %}, {% endif %}{% endfor %}
+{% for host in include.hosts %}
+{% assign hab = site.habitues | where:"username", host | first %}
+{% if forloop.last == true %} et 
+{% else %}
+{% if forloop.first == false %}, {% endif %}
+{% endif %}
+{% if include.links %}<a href="/habitues/{{ hab.username }}.html">{% endif %}{{ hab.name }}{% if include.links %}</a>{% endif %}
+{% endfor %}

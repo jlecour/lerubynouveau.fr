@@ -4,7 +4,8 @@ layout: default
 <div class="episode">
   <h1>{{ page.number }}. {{ page.title }}</h1>
   <em>{{ page.tagline }}</em><br />
-  <p>À la table, {% include hosts.html hosts=page.hosts links=true %}.</p>
+  {% capture hosts_list %}{% include hosts.html hosts=page.hosts links=true %}{% endcapture %}
+  <p>À la table, {{ hosts_list | strip_newlines }}.</p>
   <p>
     <audio id="audio" controls preload="none">
   	   <source type="audio/mp3" src="{{ page.file | prepend: site.audiofiles_path | prepend: site.media_url }}" type="audio/mpeg">

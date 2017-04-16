@@ -5,6 +5,7 @@ title: Épisodes
 {% for episode in site.episodes reversed %}<a href="/{{episode.number}}.html">
   <h2 class="nm">{{ episode.number }}. {{ episode.title }}</h2></a>
   {{ episode.tagline }}
-  <p class="info nm">avec {% include hosts.html hosts=episode.hosts links=true %}.</p>
+  {% capture hosts_list %}{% include hosts.html hosts=episode.hosts links=true %}{% endcapture %}
+  <p class="info nm">avec {{ hosts_list | strip_newlines }}.</p>
   <br />
 {% endfor %}
