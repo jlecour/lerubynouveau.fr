@@ -23,6 +23,7 @@ a:hover { text-decoration: underline;; }
 #wrapper { margin: auto; width: 290px; }
 #audio { margin: 1em 0; padding: 0; }
 #playlist { margin: 0 0 1em 0; padding: 0; }
+#playlist li { margin-left: 0.5em }
 #playlist li.active a { background-color: #9B5725; color: #F8E3D1 }
 
 .glass { font-family: 'Glass Antiqua', cursive; font-weight: normal; }
