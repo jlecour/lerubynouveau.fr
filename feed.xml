@@ -34,15 +34,14 @@ layout: null
         <itunes:author>{% include hosts.html hosts=ep.hosts %}</itunes:author>
         <itunes:summary><![CDATA[
           {% assign episode_url = ep.url | prepend: site.baseurl | prepend: site.url %}
-          </p>Retrouvez les liens et le transcript de l'épisode sur notre site&nbsp;: <a href="{{ episode_url }}">{{ episode_url }}</a></p><br />
-          <br />
-          <h2># Actualités</h2><br />
-          <br />
-          {% include actus.html actus=ep.actus from_feed=true %}<br />
-          <h2># {{ ep.title }}</h2><br />
-          <p>{{ ep.summary }}</p><br />
-          <br />
-          <br />
+          Retrouvez les liens et le transcript de l'épisode sur notre site&nbsp;: <a href="{{ episode_url }}">{{ episode_url }}<br>
+          <br>
+          # Actualités<br>
+          {% include actus.html actus=ep.actus from_feed=true %}<br>
+          <br>
+          # {{ ep.title }}<br>
+          {{ ep.summary }}<br>
+          <br>
           {% include discoveries.html discoveries=ep.discoveries from_feed=true %}
         ]]></itunes:summary>
         <itunes:duration>{{ ep.duration }}</itunes:duration>
