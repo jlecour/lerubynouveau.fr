@@ -31,19 +31,21 @@ layout: null
         <guid isPermaLink="true">{{ ep.url | prepend: site.baseurl | prepend: site.url }}</guid>
         <pubDate>{{ ep.published_date | date_to_rfc822 }}</pubDate>
         <itunes:subtitle>{{ ep.tagline }}</itunes:subtitle>
-        <itunes:author>{% include hosts.html hosts=ep.hosts %}</itunes:author>
+        {% capture hosts_list %}{% include hosts.html hosts=ep.hosts %}{% endcapture %}
+        <itunes:author>{{ hosts_list | strip_newlines }}</itunes:author>
         <itunes:summary><![CDATA[
-          {% assign episode_url = ep.url | prepend: site.baseurl | prepend: site.url %}
-          </p>Retrouvez les liens et le transcript de l'épisode sur notre site&nbsp;: <a href="{{ episode_url }}">{{ episode_url }}</a></p><br />
-          <br />
-          <h2># Actualités</h2><br />
-          <br />
-          {% include actus.html actus=ep.actus from_feed=true %}<br />
-          <h2># {{ ep.title }}</h2><br />
-          <p>{{ ep.summary }}</p><br />
-          <br />
-          <br />
-          {% include discoveries.html discoveries=ep.discoveries from_feed=true %}
+{% assign episode_url = ep.url | prepend: site.baseurl | prepend: site.url %}
+Retrouvez les liens et le transcript de l'épisode sur notre site&nbsp;: <a href="{{ episode_url }}">{{ episode_url }}</a><br>
+<br>
+# Actualités<br>
+{% capture actus_list %}{% include actus.html actus=ep.actus from_feed=true %}{% endcapture %}
+{{ actus_list | strip_newlines }}<br>
+<br>
+# {{ ep.title }}<br>
+{{ ep.summary }}<br>
+<br>
+{% capture discoveries_list %}{% include discoveries.html discoveries=ep.discoveries from_feed=true %}{% endcapture %}
+{{ discoveries_list | strip_newlines }}
         ]]></itunes:summary>
         <itunes:duration>{{ ep.duration }}</itunes:duration>
         <itunes:keywords>{% for tag in ep.tags %}{{ tag | xml_escape }}{% if forloop.last == false %}, {% endif %}{% endfor %}</itunes:keywords>
