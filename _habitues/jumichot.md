@@ -1,4 +1,3 @@
-
 ---
 layout: habitue
 name: Julien Michot
