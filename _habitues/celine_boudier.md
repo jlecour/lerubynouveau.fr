@@ -1,12 +1,12 @@
 ---
 layout: habitue
 name: Céline Boudier
-website:
+website: https://ouzepo.wordpress.com
 username: celine_boudier
-twitter:
+twitter: CelineBoudier
 zone: Londres, Angleterre
-github:
+github: CelineBoudier
 pitch:
-photo:
+photo: https://avatars2.githubusercontent.com/u/8862062?v=3&s=460
 links:
 ---
