@@ -4,7 +4,7 @@ name: Stéphanie Baltus
 website:
 twitter: steph_baltus
 username: steph_baltus
-zone:
+zone: Paris, France
 github:
 pitch:
 photo:
