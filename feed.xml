@@ -40,7 +40,6 @@ Retrouvez les liens et le transcript de l'épisode sur notre site&nbsp;: <a href
 # Actualités<br>
 {% capture actus_list %}{% include actus.html actus=ep.actus from_feed=true %}{% endcapture %}
 {{ actus_list | strip_newlines }}<br>
-<br>
 # {{ ep.title }}<br>
 {{ ep.summary }}<br>
 <br>
