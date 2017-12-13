@@ -1,13 +1,13 @@
 ---
 layout: habitue
 name: Bob Maerten
-website: https://bobmaerten.eu
+website: https://bobmaerten.info
 twitter: bobmaerten
 username: bobmaerten
 zone: Valenciennes, France
 github: bobmaerten
 pitch: En rémission de la fonction publique
-photo: https://bobmaerten.eu/images/bob_podcasting-41e431c6.jpg
+photo: https://blog.bobmaerten.info/images/bob_podcasting-41e431c6.jpg
 desc: Ancien sysadmin, tombé dans le dev depuis. Esprit DevOps en sommes.
 links:
   "Level Up Solutions": "https://levups.com"
