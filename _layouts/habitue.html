@@ -2,9 +2,7 @@
 layout: default
 ---
 <h1>{{ page.name }}</h1>
-<p>
-  <img src="{{ page.photo }}" />
-</p>
+{% if page.photo %}<p><img src="{{ page.photo }}" class="host_photo" /></p>{% endif %}
 <p>
   {{ page.zone }}
   {% if page.website %}— <a href="{{ page.website }}">{{ page.website }}</a>{% endif %}
@@ -15,11 +13,11 @@ layout: default
 <p>
 {{ page.desc }}
 </p>
-
+<h2>Liens</h2>
 <ul>{% for link_hash in page.links %}<li>
   {% assign url = link_hash[1] %}
   {% assign name = link_hash[0] %}
   <a href={{ url }}>{{ name }}</a>
 </li>{% endfor %}</ul>
 
-{{ content }}
+{% include episodes.html username=page.username %}

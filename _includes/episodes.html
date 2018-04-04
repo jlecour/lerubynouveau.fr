@@ -1,0 +1,8 @@
+<h2>Participation(s)</h2>
+<ul>
+{% for episode in site.episodes reversed %}
+  {% for host in episode.hosts %}
+    {% if host == include.username %}<li><a href="/{{episode.number}}.html">{{ episode.number }}. {{ episode.title }}</a></li>{% endif %}
+  {% endfor %}
+{% endfor %}
+</ul>
